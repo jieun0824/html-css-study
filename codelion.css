@@ -1,8 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap');
+/*폰트 지정하기 위해 import*/
+
+*{ /*모든 문서에 적용되는 문법*/
+    font-family: 'Montserrat';  
+}
+
+
+body, h1, h2 {
+    margin:0px;
+    padding: 0px;
+}
+
+/* body {
+    min-width: fit-content;
+} */
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: lighter;
+    color: #282828;
+    border-bottom: 1px solid #ebebeb; /*아래에 줄 긋기*/
+    margin-bottom: 16px;
+    padding-bottom: 5px;
+}
+
 footer {
     text-align: center;
     background-color: #1E1E1E;
     color: #919191;
-    font: 12px;
+    font-size: 12px;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 24px;
+
 }
 
 
@@ -10,9 +48,69 @@ footer {
 .mainbox {
     border : 1px solid #ebebeb;
     width: 610px;
-    text-align: right;
+    text-align: left;
     margin-left:auto;
     margin-right: auto;
     padding: 30px;
     margin: 30px;
+    box-shadow: 0 1px 20px rgba(0,0,0,0.1); 
+    /*0 -> 가로축으로 그림자 
+    얼마나 뻣어나가는지 1px-> y축으로 그림자 이동하는 것 20px -> blur 네번째 0 값 -> spread, 퍼지는 정도,
+    마지막 값은 색 지정 마지막 0.1은 투명도, rgb 3값 - 0~225, 투명도 0~1 */
+}
+
+.name-text {
+    font-size: 16px;
+    color: #7c7c7c;
+    font-weight: bold;
+} 
+.about-me-text {
+    font-size: 10px;
+    line-height: 16px; /*줄간 간격 16px로 지정*/
+}
+.title-text { 
+    font-size: 11px;
+    font-weight: bold;
+    color: #282828;
+    float: left; /*float -> 둥둥 떠다님. 왼쪽에 붙어서 떠다니도록(따라서 지정된 줄 없고, 다른 요소와 겹칠 수도 있다).
+     왼쪽 정렬, year-text는 같은 줄의 오른쪽 정렬 
+     float한 것과 다른 요소 겹치지 않기 위해 .float-wrap으로 막아줌*/
+    
+}
+
+.year-text {
+    font-size: 11px;
+    font-weight: bold;
+    color: #282828;
+    float: right;
+}
+
+.float-wrap {
+    overflow:hidden; /*float 요소들 묶어주고, 
+    다른 요소들이 이것에 영향받지 않도록(겹치지 않도록 한다*/
+}
+
+.desc-text {
+    font-size: 9px;
+}
+
+.desc-subtext {
+    font-size: 9px;
+    color:#282828;
+    padding-left:16px;
+}
+
+
+.title-box {
+    text-align : right;
+
+}
+
+.sns-img {
+    width: 12px;
+    height: 12px;
+}
+
+.sns-wrap {
+    text-align: right;
 }
